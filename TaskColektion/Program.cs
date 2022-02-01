@@ -27,7 +27,7 @@ namespace TaskColektion
 
             foreach (var w in words)
                 wordArrayLincedList.AddLast(w);
-
+            //Ввод времени необходимое для заполнение Колекции LinkedList<>
             Console.WriteLine($"Вставка в  словарь LinkedList<>: {watchTwo.Elapsed.TotalMilliseconds}  мс");
 
             // проверка скорости выполнения коллекции List
@@ -37,7 +37,7 @@ namespace TaskColektion
 
             foreach (var w in words)
                 wordArrayList.Add(w);
-
+            //Ввод времени необходимое для заполнение Колекции List<>
             Console.WriteLine($"Вставка в  словарь List<>: {watchOne.Elapsed.TotalMilliseconds}  мс");
 
 
