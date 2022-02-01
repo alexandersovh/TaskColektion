@@ -12,19 +12,15 @@ namespace TaskColektion
     {
         static void Main(string[] args)
         {
-            //запуск таймера
 
-
-            string text = File.ReadAllText("C:/Users/alexandr/OneDrive/Рабочий стол/trening/Text1.txt");
+            string text = File.ReadAllText("С:/");//указать путь к файлу
 
             char[] delimiters = new char[] { ' ', '\r', '\n' };
 
 
             string[] words = text.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
 
-
-
-
+            // проверка скорости выполнения коллекции LinkedList
             var watchTwo = Stopwatch.StartNew();
 
             LinkedList<string> wordArrayLincedList = new LinkedList<string>();            
@@ -34,10 +30,7 @@ namespace TaskColektion
 
             Console.WriteLine($"Вставка в  словарь LinkedList<>: {watchTwo.Elapsed.TotalMilliseconds}  мс");
 
-
-
-
-
+            // проверка скорости выполнения коллекции List
             var watchOne = Stopwatch.StartNew();
 
             List<string> wordArrayList = new List<string>();
@@ -46,6 +39,7 @@ namespace TaskColektion
                 wordArrayList.Add(w);
 
             Console.WriteLine($"Вставка в  словарь List<>: {watchOne.Elapsed.TotalMilliseconds}  мс");
+
 
             Console.ReadKey();
         }
